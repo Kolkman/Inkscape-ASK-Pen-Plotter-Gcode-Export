@@ -10,8 +10,8 @@
              gui-text="Output file:">plot.gcode</param>
 
       <label appearance="header">Pen commands</label>
-      <param name="pen_up" type="string" gui-text="Pen up command:">M3 S0</param>
-      <param name="pen_down" type="string" gui-text="Pen down command:">M3 S180</param>
+      <param name="pen_up" type="string" gui-text="Pen up command:">G21 G90 G53 G0 Z2</param>
+      <param name="pen_down" type="string" gui-text="Pen down command:">G21 G90 G53 G0 Z0</param>
       <param name="pen_delay" type="int" min="0" max="10000"
              gui-text="Wait after pen up/down (ms):"
              gui-description="Gives the servo time to move before the plotter starts moving.">100</param>
@@ -25,7 +25,7 @@
       <param name="draw_speed" type="int" min="1" max="100000"
              gui-text="Drawing speed (mm/min):">1500</param>
       <param name="travel_speed" type="int" min="1" max="100000"
-             gui-text="Travel speed, pen up (mm/min):">4000</param>
+             gui-text="Travel speed, pen up (mm/min):">2000</param>
     </page>
 
     <page name="mode" gui-text="Mode">
